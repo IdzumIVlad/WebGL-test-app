@@ -15,7 +15,7 @@ bot.onText(/surprise/, (msg) => bot.sendMessage(msg.from.id, "Andrew is gay"));
 bot.onText(/start|game/, (msg) => bot.sendGame(msg.from.id, gameName));
 bot.on("callback_query", function (query) {
     if (query.game_short_name !== gameName) {
-        bot.answerCallbackQuery(query.id, "Sorry, '" + query.game_short_name + "' is not available.");
+        bot.answerCallbackQuery(query.id, "Sorry, '" + query.game_short_name + "' is not available. LogName:" + gameName);
     } else {
         queries[query.id] = query;
         let gameurl = "https://idzumivlad.github.io/WebGL-test-app/";
