@@ -11,8 +11,8 @@ const gameName = "testApp";
 const queries = {};
 server.use(express.static(path.join(__dirname, 'WebGL-test-app')));
 bot.onText(/help/, (msg) => bot.sendMessage(msg.from.id, "Say /game if you want to play."));
+bot.onText(/surprise/, (msg) => bot.sendMessage(msg.from.id, "Andrew is gay"));
 bot.onText(/start|game/, (msg) => bot.sendGame(msg.from.id, gameName));
-bot.onText(/surprise/, (msg) => bot.SendMessage(msg.from.id, "Andrew is gay"));
 bot.on("callback_query", function (query) {
     if (query.game_short_name !== gameName) {
         bot.answerCallbackQuery(query.id, "Sorry, '" + query.game_short_name + "' is not available.");
