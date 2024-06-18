@@ -6,7 +6,7 @@ const server = express();
 const bot = new TelegramBot(TOKEN, {
     polling: true
 });
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 const gameName = "testApp";
 const queries = {};
 server.use(express.static(path.join(__dirname, 'WebGL-test-app')));
